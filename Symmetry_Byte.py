@@ -3707,8 +3707,17 @@ R4P8C4.config(bg="gray7", fg="snow")
 
 #Atajos de teclado
 
-raiz.bind("m", tempo_manual)
 raiz.bind("M", tempo_manual)
+raiz.bind("m", tempo_manual)
+
+def play_pause(event):
+    if activador:
+        Pausar()
+    else:
+        Play()
+
+raiz.bind("P", play_pause)
+raiz.bind("p", play_pause)
 
 
 #lista para acceder a las variables de botones de editor de forma más eficiente uwu!
